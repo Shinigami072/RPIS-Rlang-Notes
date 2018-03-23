@@ -1,6 +1,6 @@
 Listy
 =========================
-są to wektory umożliwiające przechowywanie innych obiektów
+są to wektory umożliwiające przechowywanie obiektów różnych typów
 
 ```
 n = c(1,2,3)

@@ -24,3 +24,4 @@ rbind(A,c(1,2,3)) # łączy rzędami
 
 c(A) # rozwija macierz na wektor
 ```
+attributes(m1) - wyświetla ilość wierszy i kolumn macierzy
