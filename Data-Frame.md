@@ -15,7 +15,7 @@ umozliwia importowanie danych:
     - XLS
     - table
     - SPSS
- - csv ```  mydata= read.csv("mydata.csv",header=TRUE,sep=";") #wczytanie pliku csv nagłowkiem, i separatorem ; ````
+ - csv ```  mydata= read.csv("mydata.csv",header=TRUE,sep=";") #wczytanie pliku csv nagłowkiem, i separatorem ; ```
 ```
 getwd() # sprawdza working directory
 setwd("s") # ustawia working dir
