@@ -1,0 +1,65 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.4
+% see http://writer2latex.sourceforge.net for more info
+\documentclass[fleqn]{article}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,polish]{babel}
+
+\usepackage{array}
+
+
+
+\title{Statystyka: Matematyka}
+\author{Krzysztof Stasiowski}
+\date{}
+\begin{document}
+\section*{Wzór Bayesa:}
+\[P(A|B) = \frac{P(A)P(B|A)}{P(B)}\]
+\[P(A|B) \texttt{- prawdobodoieństwo A pod warunkem B}\]
+\[P(B|A) \texttt{- prawdobodoieństwo B pod warunkem A}\]
+\[P(A)   \texttt{- prawdobodoieństwo A}\]
+\[P(B)   \texttt{- prawdobodoieństwo B}\]
+
+\section*{Rozkład dwumianowy:}
+\[P(X=k) = \binom{N}{k}*p^k*(1-p)^{n-k}\]
+\[N \texttt{- ilość prób}\]
+\[k \texttt{- ilość sukcesów}\]
+\[p \texttt{- prawdopobobieństwo sukcesu}\]
+
+\section*{Rozkład Poissona:}
+\[P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!}\]
+\[k \texttt{- ilość sukcesów}\]
+\[\lambda \texttt{- wartość spodziewana}\]
+\[\lambda = E(x) = Np\]
+
+\section*{Wartość Oczekiwana:}
+\[E(X) = \sum_{i=1}^Nx_ip_i\]
+\[p_i \texttt{- prawdopodobieństwo i wartość}\]
+\[x_i \texttt{- wartość i}\]
+\[n   \texttt{- ilość wartości }\]
+
+\section*{Wariancja:}
+\[V(X) = \sum_{i=1}^N(x_i-E(X))^2p_i = E(X^2) - [E(X)]^2\]
+\[E(X) \texttt{- wartość spodziewana}\]
+\[p_i \texttt{- prawdopodobieństwo i wartość}\]
+\[x_i \texttt{- wartość i}\]
+\[n   \texttt{- ilość wartości }\]
+
+\section*{Średnia:}
+\[\bar{x} = \frac{1}{n}\sum_{i=1}^Nx_i\]
+\[x_i \texttt{- wartość i}\]
+\[n   \texttt{- ilość wartości }\]
+
+\section*{Wariancja:}
+\[s^2 = \frac{1}{n}\sum_{i=1}^N(x_i-\bar{x})^2\]
+\[x_i \texttt{- wartość i}\]
+\[n   \texttt{- ilość wartości }\]
+
+\section*{Odchylenie Standardowe:}
+\[s = \sqrt{\frac{1}{n}\sum_{i=1}^N(x_i-\bar{x})^2}\]
+\[x_i \texttt{- wartość i}\]
+\[n   \texttt{- ilość wartości }\]
+
+\end{document}

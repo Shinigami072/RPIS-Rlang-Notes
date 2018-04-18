@@ -16,11 +16,9 @@ v = list(ab=c(1,2,3),bc=c("a","b"))
 v$ab # zwraca element o nazwie ab
 v[["ab"]] # zwraca element ab
 
-v["ab"] # zwraca kopię elemenu ab
+v["ab"] # zwraca kopię elementu ab
 
 attach(v) # pozwala na odwołanie się do elementów v
 ab # zwróci element v$ab
 detach(v)
-
-
 ```

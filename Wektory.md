@@ -8,7 +8,7 @@ sposoby deklarowania wektorów:
 v1 <- 0:5 # w wektorze będą cyfry od 0 do 5 tzn: [0 1 2 3 4 5] (typ int)
 v2 <- c(2,2,2,1,1,1) wektor wygląda tak: [2 2 2 1 1 1 1] (typ numeric)
 v3 <- seq(0,1,by=0.2) wartości od 0 do 1 wzrastają co 0,2 [0 0,2 0,4 0,6 0,8 1]
-v7 <- c("A","B","C","D","E") wektor charów (typ char)
+v7 <- c("A","B","C","D","E") wektor char-ów (typ char)
 v8 <- c(T,F,F,T,T) wektor typów logicznych (typ logi)
 
 ```
@@ -22,11 +22,11 @@ C(C(2,3,5),"aa","BB") #łączenie wektorów
 
 
 Parametry statystyki opisowej dla wektora:
-1) mean(v1) - średnia arytmetyczna warotści wektora v1
+1) mean(v1) - średnia arytmetyczna wartości wektora v1
 2) median(v1) - mediana wartości wektora
-3) quantile(v1) - wyświetla bardzo ładny podział warotości na kwantyle
+3) quantile(v1) - wyświetla bardzo ładny podział wartości na kwantyle
 4) quantile(v1, 0.25) - wyświetla konkretną wartość z wektora której przyporządkowany jest kwantyl 25%
-5) IQR(v1) - wyświetla rozstęp miedzykwartylowy (czyli różnica między 3cim a 1szym kwartylem)
+5) IQR(v1) - wyświetla rozstęp miedzy kwartylowy (czyli różnica między 3-cim a 1-szym kwartylem)
 6) sd(v1) - oblicza odchylenie standardowe
 7) var(v1) - oblicza wariancję
 8) range(v1) - zakres wartości przyjmowanych w wektorze (min i max)

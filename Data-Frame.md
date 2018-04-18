@@ -1,6 +1,7 @@
 Data frame
 =========================
-przechowywuje tablice danych
+
+przechowuje tablice danych
 ```
 > n = c(2, 3, 5)
 > s = c("aa", "bb", "cc")
@@ -10,7 +11,7 @@ przechowywuje tablice danych
 
 można dostać się do jego elementów tak jak do macierzy
 
-umozliwia importowanie danych:
+umożliwia importowanie danych:
  - nie podane jeszcze na zajęcia:
     - XLS
     - table
