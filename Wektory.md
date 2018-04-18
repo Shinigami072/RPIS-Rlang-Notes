@@ -10,6 +10,8 @@ v2 <- c(2,2,2,1,1,1) wektor wygląda tak: [2 2 2 1 1 1 1] (typ numeric)
 v3 <- seq(0,1,by=0.2) wartości od 0 do 1 wzrastają co 0,2 [0 0,2 0,4 0,6 0,8 1]
 v7 <- c("A","B","C","D","E") wektor char-ów (typ char)
 v8 <- c(T,F,F,T,T) wektor typów logicznych (typ logi)
+v9 <- vector("typ danych jakie mają być w wektorze np. numeric", length = 9) - utowrzy "pusty wektor" tzn. [0 0 0 0 0 0 0 0 0]
+v1 <- rep(wartość, 5) - stworzy wektor z pięcioma tymi samymi warotsciamii
 
 ```
 
