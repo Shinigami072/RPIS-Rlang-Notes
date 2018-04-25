@@ -15,38 +15,6 @@
 \author{Krzysztof Stasiowski}
 \date{}
 \begin{document}
-\section*{Wzór Bayesa:}
-\[P(A|B) = \frac{P(A)P(B|A)}{P(B)}\]
-\[P(A|B) \texttt{- prawdobodoieństwo A pod warunkem B}\]
-\[P(B|A) \texttt{- prawdobodoieństwo B pod warunkem A}\]
-\[P(A)   \texttt{- prawdobodoieństwo A}\]
-\[P(B)   \texttt{- prawdobodoieństwo B}\]
-
-\section*{Rozkład dwumianowy:}
-\[P(X=k) = \binom{N}{k}*p^k*(1-p)^{n-k}\]
-\[N \texttt{- ilość prób}\]
-\[k \texttt{- ilość sukcesów}\]
-\[p \texttt{- prawdopobobieństwo sukcesu}\]
-
-\section*{Rozkład Poissona:}
-\[P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!}\]
-\[k \texttt{- ilość sukcesów}\]
-\[\lambda \texttt{- wartość spodziewana}\]
-\[\lambda = E(x) = Np\]
-
-\section*{Wartość Oczekiwana:}
-\[E(X) = \sum_{i=1}^Nx_ip_i\]
-\[p_i \texttt{- prawdopodobieństwo i wartość}\]
-\[x_i \texttt{- wartość i}\]
-\[n   \texttt{- ilość wartości }\]
-
-\section*{Wariancja:}
-\[V(X) = \sum_{i=1}^N(x_i-E(X))^2p_i = E(X^2) - [E(X)]^2\]
-\[E(X) \texttt{- wartość spodziewana}\]
-\[p_i \texttt{- prawdopodobieństwo i wartość}\]
-\[x_i \texttt{- wartość i}\]
-\[n   \texttt{- ilość wartości }\]
-
 \section*{Średnia:}
 \[\bar{x} = \frac{1}{n}\sum_{i=1}^Nx_i\]
 \[x_i \texttt{- wartość i}\]
@@ -57,9 +25,62 @@
 \[x_i \texttt{- wartość i}\]
 \[n   \texttt{- ilość wartości }\]
 
-\section*{Odchylenie Standardowe:}
+\section*{Odchylenie Standardowe \(\sigma\):}
 \[s = \sqrt{\frac{1}{n}\sum_{i=1}^N(x_i-\bar{x})^2}\]
 \[x_i \texttt{- wartość i}\]
 \[n   \texttt{- ilość wartości }\]
 
+\pagebreak
+\section*{Zmienna Dyskretna:}
+Właściwości: suma prawdopodobieństw wszystkich zmiennych \(\sum_{i=1}{p_i}=1\).
+\subsection*{Wartość Oczekiwana:}
+\[E(X) = \sum_{i=1}^Nx_ip_i\]
+\[p_i \texttt{- prawdopodobieństwo i wartość}\]
+\[x_i \texttt{- wartość i}\]
+\[n   \texttt{- ilość wartości }\]
+\subsection*{Wariancja:}
+\[V(X) = \sum_{i=1}^N(x_i-E(X))^2p_i = E(X^2) - [E(X)]^2\]
+\[E(X) \texttt{- wartość spodziewana}\]
+\[p_i \texttt{- prawdopodobieństwo i wartość}\]
+\[x_i \texttt{- wartość i}\]
+\[n   \texttt{- ilość wartości }\]
+\subsection*{Wzór Bayesa:}
+\[P(A|B) = \frac{P(A)P(B|A)}{P(B)}\]
+\[P(A|B) \texttt{- prawdobodoieństwo A pod warunkem B}\]
+\[P(B|A) \texttt{- prawdobodoieństwo B pod warunkem A}\]
+\[P(A)   \texttt{- prawdobodoieństwo A}\]
+\[P(B)   \texttt{- prawdobodoieństwo B}\]
+
+\subsection*{Rozkład dwumianowy:}
+\[P(X=k) = \binom{N}{k}*p^k*(1-p)^{n-k}\]
+\[N \texttt{- ilość prób}\]
+\[k \texttt{- ilość sukcesów}\]
+\[p \texttt{- prawdopobobieństwo sukcesu}\]
+
+\subsection*{Rozkład Poissona:}
+\[P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!}\]
+\[k \texttt{- ilość sukcesów}\]
+\[\lambda \texttt{- wartość spodziewana}\]
+\[\lambda = E(x) = Np\]
+\pagebreak
+\section*{Zmienna Ciągła:}
+Pole pod wykresem gęstości prawdopodobieństwa \(=1\)
+\[\int_{-\infty}^{\infty}{P(x)dx}=1\]
+
+\subsection*{Wartość Oczekiwana \(\mu\) :}
+\[E(x) = \int_{-\infty}^{\infty}{xP(x)dx}\]
+\[P(x) \texttt{- prawdopodobienstwo przyjęca wartości }x\]
+\subsection*{Dystrybuanta:}
+\[F(x_k) = \int_{-\infty}^{x_k}{P(x)dx}\]
+\[P(x) \texttt{- prawdopodobienstwo przyjęca wartości }x\]
+
+\subsection*{Rozkład Normalny:}
+\[N(\mu,\sigma)\]
+\[N(0,1) \texttt{- standardowy rozkład normalny}\]
+\[\mu \texttt{- wartość oczekiwana}\]
+\[\sigma \texttt{- odcylenie standardowe}\]
+\subsubsection*{Standaryzacja Rozkładu normalnego}
+\[X = N(\mu,\sigma) \texttt{- Dane o podanym rozkładznie normalnym}\]
+\[Z = N(0,1) \texttt{- dane o normalnym rozkładzie standardowym}\]
+\[Z = \frac{X-\mu}{\sigma} = N(0,1) \]
 \end{document}
