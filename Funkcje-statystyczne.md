@@ -10,7 +10,6 @@ quartile(wektor) #qwartyle danego wektora
 quartile(wektor,0.25) #konkretny kwartyl
 IQR(wektor) #rozstęp międzykwqrtylowy
 
-
 ```
 Dystrybucja Binominalna/dwumianowa
 ==========================
@@ -48,5 +47,4 @@ hist(w) #narysuj histogram
 plot(w) #narysuj wykres
 
 ```
-
 [źródło](http://www.r-tutor.com/elementary-statistics)

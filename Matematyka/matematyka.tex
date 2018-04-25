@@ -71,14 +71,26 @@ Pole pod wykresem gęstości prawdopodobieństwa \(=1\)
 \[E(x) = \int_{-\infty}^{\infty}{xP(x)dx}\]
 \[P(x) \texttt{- prawdopodobienstwo przyjęca wartości }x\]
 \subsection*{Dystrybuanta:}
-\[F(x_k) = \int_{-\infty}^{x_k}{P(x)dx}\]
-\[P(x) \texttt{- prawdopodobienstwo przyjęca wartości }x\]
+\begin{align*}
+F(x_k)& = \int_{-\infty}^{x_k}{P(x)dx}\\
+P(x) & & \texttt{- prawdopodobienstwo wartości }x\\
+P(a < x \geq b)&= F(b)-F(a) &\texttt{- prawdopodobienstwo wartości }x\\
+\end{align*}
+
+
 
 \subsection*{Rozkład Normalny:}
-\[N(\mu,\sigma)\]
-\[N(0,1) \texttt{- standardowy rozkład normalny}\]
-\[\mu \texttt{- wartość oczekiwana}\]
-\[\sigma \texttt{- odcylenie standardowe}\]
+\begin{align*}
+N(\mu,\sigma)&&\texttt{- rozkład normalny}\\
+N(0,1)& &\texttt{- standardowy rozkład normalny}\\
+\mu& &\texttt{- wartość oczekiwana}\\
+\sigma& &\texttt{- odcylenie standardowe}\\
+P(a < x \geq b) = F(b)-F(a)& &\texttt{- prawdopodobienstwo wartości }x\\
+P(\mu -\sigma < x \geq \mu+\sigma) \approx 68\%& &\texttt{- prawdopodobienstwo wartości }x  \\
+P(\mu -2\sigma < x \geq \mu+2\sigma) \approx 95\%& &\texttt{- prawdopodobienstwo wartości }x \\
+P(\mu -3\sigma < x \geq \mu+3\sigma) \approx 99\%& &\texttt{- prawdopodobienstwo wartości }x \\
+\end{align*}
+
 \subsubsection*{Standaryzacja Rozkładu normalnego}
 \[X = N(\mu,\sigma) \texttt{- Dane o podanym rozkładznie normalnym}\]
 \[Z = N(0,1) \texttt{- dane o normalnym rozkładzie standardowym}\]
