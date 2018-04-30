@@ -1,85 +1,171 @@
 % This file was converted to LaTeX by Writer2LaTeX ver. 1.4
 % see http://writer2latex.sourceforge.net for more info
 \documentclass[fleqn]{article}
-\usepackage{amsmath}
-\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{amsmath,amssymb,amsfonts,textcomp}
+\usepackage{array}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english,polish]{babel}
-
-\usepackage{array}
-
 
 
 \title{Statystyka: Matematyka}
 \author{Krzysztof Stasiowski}
 \date{}
+\usepackage[pdftex,pagebackref=false,unicode=true,pdfusetitle,colorlinks=true,linkcolor=blue]{hyperref}
+
 \begin{document}
-\section*{Średnia:}
+\section{Wstęp:}
+\subsection{Cechy X:}
+\begin{itemize}
+\item mierzalne (ilościowe) - właściwości można zmierzyć i wyrazić za pomocą odpowiednich jednostek
+\item porządkowe (podtyp ilościowych) - badają natężenie badanej właściwości przedstawionej w sposób opisowy - np. oceny 
+\item niemierzalne (jakościowe) - zwykle określane słownie nie mają jednoznacznych wartości liczbowych np. (płeć firma)
+\end{itemize}
+
+
+\subsection{Kwantyle Q:}
+Dzieli zbiorowość na części od względem ilości cech. 
+\begin{itemize}
+\item
+$Q_1$ - dzieli na dwie części - w taki sposób że $25\%$ ma wartości niższe a $75\%$ wyższe.
+\item
+$Q_2$ połowa cech ma wartości mniejsze a połowa większe - mediana - wartość środkowa.  
+\item
+$Q_3$ - $75\%$ mniejszych cech, $25\%$ większych.
+\end{itemize}
+
+\subsection{Średnia:}
+Przybliżenie wartości oczekiwanej. Suma kwadratów odległości od średniej jest minimalna.
 \[\bar{x} = \frac{1}{n}\sum_{i=1}^Nx_i\]
-\[x_i \texttt{- wartość i}\]
-\[n   \texttt{- ilość wartości }\]
+$x_i$ - wartość $i$\\
+$n$ - ilość wartości
 
-\section*{Wariancja:}
+\subsection{Wariancja \texorpdfstring{\(s^2\)}{V(X)}:}
+Średnia z wartości odchyleń od średniej arytmetycznej.
 \[s^2 = \frac{1}{n}\sum_{i=1}^N(x_i-\bar{x})^2\]
-\[x_i \texttt{- wartość i}\]
-\[n   \texttt{- ilość wartości }\]
+$x_i$ - wartość $i$\\
+$n$ - ilość wartości
 
-\section*{Odchylenie Standardowe \(\sigma\):}
+
+\subsection{Odchylenie Standardowe \texorpdfstring{\(\sigma\)}{s}:}
+Pierwiastek kwadratowy z wariancji - Stanowi miarę zróżnicowania, przeciętne zróżnicowanie wartości cechy od średniej arytmetycznej.
+
 \[s = \sqrt{\frac{1}{n}\sum_{i=1}^N(x_i-\bar{x})^2}\]
-\[x_i \texttt{- wartość i}\]
-\[n   \texttt{- ilość wartości }\]
+$x_i$ - wartość $i$\\
+$n$ - ilość wartości \\
+Około $\frac{2}{3}$ wszystkich jednostek cechy znajduje się w przedziale: $(\bar{x}-s,\bar{x}+s)$\\
+Około $99\%$ wszystkich wartości znajduje się w przedziale:  $(\bar{x}-3s,\bar{x}+3s)$
+
+\subsection{Rozstęp:}
+różnica między wartością maksymalną a minimalną cechy.\\
+rozstęp między-kwantylowy (IQR). $Q_3-Q_1$
+\pagebreak
+
+\section{Szeregi:}
+\subsection{Szereg Szczegółowy:}
+uporządkowany ciąg wartości cechy statystycznej
+
+\subsection{Szereg Rozdzielczy:}
+uzyskuje się dzieląc dane statystyczne na pewne kategorie i podając liczebność danych w każdej kategorii - reprezentowane za pomocą histogramu.
+często zakłada się że $k=\sqrt{n}$\\ $k$ - liczba przedziałów,\\ $n$ - liczebność 
+\subsubsection{Wariancja:}
+\[s^2 = \frac{1}{n}\sum_{i=1}^N(\bar{x_i}-\bar{x})^2n_i\]
+$\bar{x_i}$ -średnia wartości w przedziale $i$\\
+$n_i$ - ilość wartości w przedziale $i$
 
 \pagebreak
-\section*{Zmienna Dyskretna:}
-Właściwości: suma prawdopodobieństw wszystkich zmiennych \(\sum_{i=1}{p_i}=1\).
-\subsection*{Wartość Oczekiwana:}
-\[E(X) = \sum_{i=1}^Nx_ip_i\]
-\[p_i \texttt{- prawdopodobieństwo i wartość}\]
-\[x_i \texttt{- wartość i}\]
-\[n   \texttt{- ilość wartości }\]
-\subsection*{Wariancja:}
-\[V(X) = \sum_{i=1}^N(x_i-E(X))^2p_i = E(X^2) - [E(X)]^2\]
-\[E(X) \texttt{- wartość spodziewana}\]
-\[p_i \texttt{- prawdopodobieństwo i wartość}\]
-\[x_i \texttt{- wartość i}\]
-\[n   \texttt{- ilość wartości }\]
-\subsection*{Wzór Bayesa:}
+\section{Prawdopodobieństwo:}
+\[P(B) = \sum_i{P(A_i)P(B|A_i)}\]
+$P(B|A_i)$- prawdopodobieństwo $B$ pod warunkiem $A_i$\\
+$P(A_i)$ - prawdopodobieństwo $A_i$ - rozdzielne warunki\\
+$P(B)$ - prawdopodobieństwo $B$
+
+Warunek unormowania prawdopodobieństw:
+\[\sum_{k=0}{P_k}=1\]
+
+\subsection{Wzór Bayesa:}
 \[P(A|B) = \frac{P(A)P(B|A)}{P(B)}\]
-\[P(A|B) \texttt{- prawdobodoieństwo A pod warunkem B}\]
-\[P(B|A) \texttt{- prawdobodoieństwo B pod warunkem A}\]
-\[P(A)   \texttt{- prawdobodoieństwo A}\]
-\[P(B)   \texttt{- prawdobodoieństwo B}\]
+$P(A|B)$ - prawdopodobieństwo $A$ pod warunkiem $B$\\
+$P(B|A)$- prawdopodobieństwo $B$ pod warunkiem $A$\\
+$P(A)$ - prawdopodobieństwo $A$\\
+$P(B)$ - prawdopodobieństwo $B$
 
-\subsection*{Rozkład dwumianowy:}
-\[P(X=k) = \binom{N}{k}*p^k*(1-p)^{n-k}\]
-\[N \texttt{- ilość prób}\]
-\[k \texttt{- ilość sukcesów}\]
-\[p \texttt{- prawdopobobieństwo sukcesu}\]
-
-\subsection*{Rozkład Poissona:}
-\[P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!}\]
-\[k \texttt{- ilość sukcesów}\]
-\[\lambda \texttt{- wartość spodziewana}\]
-\[\lambda = E(x) = Np\]
 \pagebreak
-\section*{Zmienna Ciągła:}
+
+\section{Zmienna Dyskretna:}
+Takie zmienne, które przyjmują skończony przeliczalny zbiór możliwych wartości.
+Właściwości: suma prawdopodobieństw wszystkich zmiennych \(\sum_{i=1}{p_i}=1\).
+\subsection{Dystrybuanta:}
+Funkcja przyporządkowująca skumulowaną wartość prawdopodobieństwa mniejszego od danego $x$
+\[F(x)=P(X \leq x)=\sum_{x_i:x_i \leq x}p(x_i)\]
+\subsection{Wartość Oczekiwana:}
+Najbardziej prawdopodobna wartość, przyjmowana przez $X$
+\[E(X) = \sum_{i=1}^nx_ip_i\]
+$p_i$ - prawdopodobieństwo $i$ wartość\\
+$x_i$ - wartość $i$\\
+$n$   - ilość wartości
+
+Własność wartości oczekiwanej:
+\[E(aX+b)=aE(X)+b\]
+\[E(X-E(X))=0\]
+\[E(X+Y)=E(X)+E(Y)\]
+\[E(XY)=E(X)E(Y)\]
+
+\subsection{Wariancja:}
+wartość przeciętna kwadratu odchylenia zmiennej losowej od jej wartości oczekiwanej.
+\[V(X) = \sum_{i=1}^N(x_i-E(X))^2p_i = E(X^2) - [E(X)]^2\]
+$E(X)$ - wartość spodziewana\\
+$p_i$ - prawdopodobieństwo $i$ wartość\\
+$x_i$ - wartość $i$\\
+$n$   - ilość wartości
+
+Własności wariancji:
+\[V(aX+b)=a^2V(X)\]
+\[V(X+Y)=V(X)+V(Y)\]
+\[V(X-Y)=V(X)+V(Y)\]
+
+\subsection{Rozkład dwumianowy:}
+Prawdopodobieństwo $k$ sukcesów przy $N$ próbach.
+\[P(X=k) = \binom{N}{k}p^k(1-p)^{N-k}\]
+\[V(X)= Np(1-p)\]
+\[E(X)=Np\]
+\[F(X)=P(X \leq x) = \sum_{k \leq x}{\binom{N}{k}p^k(1-p)^{N-k}}\]
+$N$ - ilość prób\\
+$k$ - ilość sukcesów\\
+$p$ - prawdopodobieństwo sukcesu
+
+\subsection{Rozkład Poissona:}
+Prawdopodobieństwo $k$ sukcesów przy dużej ilości prób.
+\[P(X=k) = \frac{\lambda^ke^{-\lambda}}{k!}\]
+$k$ - ilość sukcesów\\
+$\lambda$ - wartość spodziewana
+\[\lambda = E(x) = Np\]
+
+\pagebreak
+\section{Zmienna Ciągła:}
+Przyjmuje wartości rzeczywiste z określonego przedziału.
 Pole pod wykresem gęstości prawdopodobieństwa \(=1\)
 \[\int_{-\infty}^{\infty}{P(x)dx}=1\]
 
-\subsection*{Wartość Oczekiwana \(\mu\) :}
-\[E(x) = \int_{-\infty}^{\infty}{xP(x)dx}\]
-\[P(x) \texttt{- prawdopodobienstwo przyjęca wartości }x\]
-\subsection*{Dystrybuanta:}
+\subsection{Dystrybuanta:}
+Prawdopodobieństwo przyjęcia wartości mniejszej od $x$ jest pole od $-\infty$ do niej.
 \begin{align*}
 F(x_k)& = \int_{-\infty}^{x_k}{P(x)dx}\\
 P(x) & & \texttt{- prawdopodobienstwo wartości }x\\
 P(a < x \geq b)&= F(b)-F(a) &\texttt{- prawdopodobienstwo wartości }x\\
 \end{align*}
 
+\subsection{Wartość Oczekiwana \texorpdfstring{\(\mu\)}{E(X)} :}
+\[E(x) = \int_{-\infty}^{\infty}{xP(x)dx}\]
+$P(x)$ - prawdopodobieństwo przyjęcia wartości$x$
+
+\subsection{Wariancja:}
+\[V(X)=\int_{-\infty}^{\infty}\left[X-E(X)\right]^2P(x)dx\]
 
 
-\subsection*{Rozkład Normalny:}
+
+\subsection{Rozkład Normalny:}
+\[N(\mu,\sigma) =  \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}} \left( \frac{x- \mu}{\sigma} \right)^2 \]
 \begin{align*}
 N(\mu,\sigma)&&\texttt{- rozkład normalny}\\
 N(0,1)& &\texttt{- standardowy rozkład normalny}\\
@@ -91,7 +177,7 @@ P(\mu -2\sigma < x \geq \mu+2\sigma) \approx 95\%& &\texttt{- prawdopodobienstwo
 P(\mu -3\sigma < x \geq \mu+3\sigma) \approx 99\%& &\texttt{- prawdopodobienstwo wartości }x \\
 \end{align*}
 
-\subsubsection*{Standaryzacja Rozkładu normalnego}
+\subsubsection{Standaryzacja Rozkładu normalnego}
 \[X = N(\mu,\sigma) \texttt{- Dane o podanym rozkładznie normalnym}\]
 \[Z = N(0,1) \texttt{- dane o normalnym rozkładzie standardowym}\]
 \[Z = \frac{X-\mu}{\sigma} = N(0,1) \]
