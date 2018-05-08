@@ -64,6 +64,11 @@ isprob <- function(wek,pr){
 }
 
 
+stand <- function(x){
+	z = ((x-mean(x))/sd(x)
+	return(z)
+}
+
 calc_interval_pp <- function(mi,sigma,a,b){
   koniec <- pnorm(b,mi,sigma)
   poczatek <- pnorm(a,mi,sigma)
