@@ -1,7 +1,7 @@
-Fukcje różne
+Funkcje różne
 =========================
 
-```
+```R
 mean(wektorCzyCo) #średnia arytmetyczna
 
 median(wektorCzyCo) #mediana
@@ -9,6 +9,29 @@ median(wektorCzyCo) #mediana
 quartile(wektor) #qwartyle danego wektora
 quartile(wektor,0.25) #konkretny kwartyl
 IQR(wektor) #rozstęp międzykwqrtylowy
+
+```
+Dystrybucja Binominalna/dwumianowa
+==========================
+```R
+#k - ilość sukcesów
+#N - ilość prób
+#p - prawdopodobieństwo
+
+dbinom(k,N,p) #density prawd. N sukcesów
+pbinom(k,N,p) #distribution prawd. -N sukcesów
+```
+Dystrybucja Poissona
+==========================
+```R
+#k - ilość sukcesów
+#lambda - wartość oczekiwana
+
+dpoiss(k,lambda) #density - prawdopodobieństo N sukcesów
+ppoiss(k,lambda) #distribution - prawdopodobieństo -N sukcesów
+```
+
+```R
 
 max(wektor) #maksymalna wartość w wektorze
 min(wektor)
