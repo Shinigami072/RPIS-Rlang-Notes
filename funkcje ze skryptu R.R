@@ -11,16 +11,16 @@ z <- function(x,a=1,b=2,c=1){
 z
 
 comp_length <- function(x1,x2){
-  #obliczam d³ wektorów
+  #obliczam dÅ‚ wektorÃ³w
   l1 <- length(x1)
   l2 <- length(x2)
-  #sprawdzenie czy wek s¹ tej samej d³
+  #sprawdzenie czy wek sÄ… tej samej dÅ‚
   if (l1==l2){
     print("wektory tej samej dl")
-    #zwraca wartoœæ TRUE
+    #zwraca wartoÅ“Ã¦ TRUE
     return(TRUE)
   } else {
-    print("wektory ró¿nej d³")
+    print("wektory rÃ³Å¼nej dÅ‚")
     return(FALSE)
   }
   
