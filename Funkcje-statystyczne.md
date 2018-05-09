@@ -11,6 +11,15 @@ quartile(wektor,0.25) #konkretny kwartyl
 IQR(wektor) #rozstęp międzykwqrtylowy
 
 ```
+
+Usówanie wartości odstających
+```R
+t = c(rnorm(20),300)#wylosowanie z wartością odstającą
+
+#t = t[abs(t-expected)<3*sd] #idea
+t = t[abs(t-mean(t))<3*sd(t)] #wykonanie
+#czy to działa ? może
+```
 Dystrybucja Binominalna/dwumianowa
 ==========================
 ```R
