@@ -6,7 +6,9 @@ przechowuje tablice danych
 > n = c(2, 3, 5)
 > s = c("aa", "bb", "cc")
 > b = c(TRUE, FALSE, TRUE)
-> df = data.frame(n, s, b)       # df is a data frame
+> df = data.frame(n, s, b)       # df is a data frame//ma kolumny o nazwach n,s,b
+cbind(df,nowa_kolumna) #dopisanie kolumny
+rbind(df,nowy_wiersz) #dopisanie wiersza
 ```
 
 można dostać się do jego elementów tak jak do macierzy

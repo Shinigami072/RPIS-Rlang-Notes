@@ -16,8 +16,12 @@ Podstawowe typy danych:
 - logical - typ logiczny TRUE FALSE
 - Character - znak/string "abc"
 
+
 ```
 as.typ_danych(zmienna) #zwraca wartość zmiennej jako dany typ danych
+as.integer(i)
+
+is.typ_danych(zmienna) #zwraca czy zmienna jest danym typem danych
 
 sprintf("%s : %d","im",10) // działa jak printf w C
 substr("ABCDEF",start=3,stop=12)
