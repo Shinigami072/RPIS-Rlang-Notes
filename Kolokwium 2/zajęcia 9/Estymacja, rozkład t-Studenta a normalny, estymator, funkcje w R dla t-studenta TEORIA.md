@@ -1,0 +1,1 @@
+Estymacja, rozkład t-Studenta a normalny, estymator, funkcje w R dla t-studenta TEORIA.md
