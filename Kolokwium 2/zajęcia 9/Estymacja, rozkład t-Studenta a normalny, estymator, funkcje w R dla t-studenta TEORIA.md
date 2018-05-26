@@ -15,7 +15,7 @@ W przypadku gdy rozmiar próby jest większy lub równy 30 wtedy zamiast brać r
 Wynika to z faktu, że rozkład t studenta dla n>=30 jest bardzo podobny do rozkładu normalnego. 
 Dla n < 30 rozkład studenta jest „szerszy”, tzn. bardziej prawdopodobne są wartości mocno odbiegające od średniej niż w przypadku rozkładu normalnego.
 
-```CHARAKTERYSTKA T-STUDENTA```
+```CHARAKTERYSTKA T-STUDENTA``
 > Dla n obserwacji rozkład studenta ma n-1 stopni swobody (ozn. df)
 > Dla n>= 30 rozkład t studenta przybliżamy rozkładem normalnym N(0,1)
 > Rozkład t- studenta jest rozkładem symetrycznym
@@ -34,18 +34,18 @@ x,q - kwantyle
 n - liczność próby
 ncp - można pomijać
 
-#ESTYMATOR
+# ESTYMATOR
 parametr obliczony dla próby badawczej, na podstawie którego szacujemy prawdziwą wartość parametru w populacji
 
-```Cechy```:
+#Cechy
 
- >Efektywność estymatora 
+ ``Efektywność estymatora ``
 to innymi słowy wielkość wariancji estymatora. Im efektywniejszy jest estymator tym ma mniejszą wariancję w kolejnych pomiarach. Innymi słowy, "narzędzie" (estymator) do estymacji parametru tym jest lepsze im dostarcza mniej zmiennych wyników
 
-> Zgodność estymatora
+`` Zgodność estymatora``
  oznacza, że wraz ze wzrostem liczby prób coraz bardziej zbliżamy się do prawdziwej szacowanej wartości. Jeżeli nasz estymator jest zbieżny to oznacza, że im więcej prób pomiaru danej wartości przeprowadzimy to estymator będzie zbliżał się do rzeczywistej wartości a tym samym będzie malał błąd oceny parametru przez estymator. 
 
-> Estymator nieobciążony
+`` Estymator nieobciążony``
  to taki, że wartość oczekiwana rozkładu estymatora jest równa wartości szacowanego parametru. Nie ma znaczenia, ile elementów jest w próbie, z której korzystamy.
 
 
